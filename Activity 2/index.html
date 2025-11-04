@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mixing Colors</h1>
+     <img src="https://www.homemade-gifts-made-easy.com/image-files/red
+-and-blue-make-venn-diagram-550x410.jpg">
+    <p id="details"></p>
+    <script>
+        class Colors {
+            constructor(primary) {
+                this.colorname = primary;
+            }
+            present() {
+                return 'When we mix ' + this.colorname;
+            }
+        }
+        class Model extends Colors {
+            constructor(primary, secondary) {
+                super(primary);
+                this.model = secondary;
+            }
+            show() {
+                return this.present() + ', it makes  ' + this.model;
+            }
+        }
+        let myColor = new Model("red and blue", "purple.");
+        document.getElementById("details").innerHTML = myColor.show();
+    </script>     
+</body>
+</html>
